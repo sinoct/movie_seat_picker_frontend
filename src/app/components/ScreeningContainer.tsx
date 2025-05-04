@@ -16,10 +16,10 @@ const ScreeningContainer: FunctionComponent<ScreeningContainerProps> = ({
       href={`/screenings/${screening.id}`}
     >
       <div className="flex justify-center flex-col items-center">
-        <div className="pb-2 mb-2 border-b-2 bor">
+        <div className="pb-2 mb-2 border-b-2">
           {formatDate(new Date(screening.start_time))}
         </div>
-        <div className="text-center">Room: {screening.room_id}</div>
+        <div className="text-center">Room: {screening.room.name}</div>
       </div>
     </Link>
   );

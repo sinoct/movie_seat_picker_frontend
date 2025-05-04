@@ -16,7 +16,7 @@ const MoviePage = async ({ params }: { params: { slug: string } }) => {
   return (
     <div className="flex flex-col justify-center items-center p-8">
       <div className="text-4xl pb-4">{movie.title}</div>
-      <div className="flex flex-col sm:flex-row gap-4 flex-wrap justify-center">
+      <div className="flex flex-col sm:flex-row gap-4 flex-wrap justify-center w-full">
         {screenings.map((screening) => {
           return (
             <div

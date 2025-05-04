@@ -24,7 +24,9 @@ const SeatContainter: FunctionComponent<SeatContainerProps> = ({
             } cursor-pointer`
       }`}
       onClick={() => {
-        selectSeat(seat);
+        if (seat.availability) {
+          selectSeat(seat);
+        }
       }}
     >
       {seat.seat_number}
