@@ -50,13 +50,10 @@ const ReservationDialog: FunctionComponent<reservationDialogProps> = ({
       </div>
       <div className="flex flex-row justify-center gap-8">
         <div
-          className={`text-xl border-2 ${
-            email && email.length
-              ? "hover:bg-slate-500 cursor-pointer"
-              : "opacity-50 cursor-not-allowed"
-          } border-gray-600 bg-slate-400 rounded-md p-4 transition-all duration-300 `}
+          className={`text-xl border-2  hover:bg-slate-500 cursor-pointer
+           border-gray-600 bg-slate-400 rounded-md p-4 transition-all duration-300 `}
           onClick={() => {
-            if (email) sendReservation("LOCKED", email);
+            sendReservation("LOCKED", email || "");
           }}
         >
           Lock
